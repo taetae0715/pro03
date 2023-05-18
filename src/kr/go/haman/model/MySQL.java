@@ -1,4 +1,4 @@
-package kr.go.haman.util;
+package kr.go.haman.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,7 +12,11 @@ public class MySQL {
 	static String USER = "root";
 	static String PASS = "1234";
 	
-	public static String MEMBER_SELECT_ALL = "select * from member";
+	public final static String MEMBER_SELECT_ALL = "select * from member";
+	public final static String MEMBER_SELECT_ONE = "select * from member where id=?";
+	public final static String MEMBER_INSERT = "insert into member values(?,?,?)";
+	public final static String MEMBER_UPDATE = "update member set pw=? where id=?";
+	public final static String MEMBER_DELETE = "delete from member where id=?";
 
 	//DB 연결
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {

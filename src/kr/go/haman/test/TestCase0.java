@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class JunitTest {
+public class TestCase0 {
 
 	@Before
 	public void beforetest() {

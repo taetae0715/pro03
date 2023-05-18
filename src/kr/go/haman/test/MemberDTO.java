@@ -1,9 +1,10 @@
-package kr.go.haman.dto;
+package kr.go.haman.test;
 
-public class Member {
+public class MemberDTO {
 	private String id;
 	private String pw;
 	private String name;
+	
 	public String getId() {
 		return id;
 	}
