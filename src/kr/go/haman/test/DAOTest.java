@@ -15,7 +15,7 @@ import org.junit.Test;
 
 public class DAOTest {
 	
-	MemberDAO dao;		
+	MemberDAO dao = new MemberDAO();		
 
 	@Test
 	public void getList() {
