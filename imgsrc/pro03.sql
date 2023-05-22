@@ -1,6 +1,6 @@
 -- create database haman;
 -- USE haman;
--- set autocommit=true;
+set autocommit=true;
 -- show variables like 'autocommit';
 
 

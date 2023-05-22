@@ -17,7 +17,7 @@ public class UserLoginCtrl extends HttpServlet {
 		String msg = "아이디와 비밀번호 입력 후 로그인하시기 바랍니다.";
 		request.setAttribute("msg", msg);
 		
-		RequestDispatcher view = request.getRequestDispatcher("login.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/user1/login.jsp");
 		view.forward(request, response);
 	}
 

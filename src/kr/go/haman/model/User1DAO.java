@@ -1,11 +1,9 @@
 package kr.go.haman.model;
 
-import java.io.UnsupportedEncodingException;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
-import java.security.spec.InvalidParameterSpecException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -159,16 +157,14 @@ public class User1DAO {
 	}
 	
 	//회원가입
-	public int insertUser(User1 user) throws InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, InvalidParameterSpecException, UnsupportedEncodingException, BadPaddingException, IllegalBlockSizeException{
+	public int insertUser(User1 user) {
 		int cnt = 0;
-		String passwd = "";
 		try {
 			conn = MySQL.getConnection();
 			pstmt = conn.prepareStatement(MySQL.USER1_INSERT);
 			pstmt.setString(1, user.getId());
-			passwd = AES256.encryptAES256(user.getPw(), key);
-			pstmt.setString(2, passwd);
-			pstmt.setString(3, user.getName());
+			pstmt.setString(2, user.getName());
+			pstmt.setString(3, user.getPw());
 			pstmt.setString(4, user.getAddr());
 			pstmt.setString(5, user.getTel());
 			pstmt.setString(6, user.getEmail());

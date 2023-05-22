@@ -9,10 +9,11 @@
 	if(session!=null) sid = (String) session.getAttribute("sid");  
 %>
 <link href="source/bulma.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <header id="header" class="container">
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="index.jsp">
+    <a href="index.jsp">
       <img src="./img/logo.png" width="321px;" height="56px;">
     </a>
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

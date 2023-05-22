@@ -44,7 +44,7 @@ public class UserLoginProCtrl extends HttpServlet {
 		if(cnt==1){
 			msg = "로그인 성공";
 			ses.setAttribute("sid", id);
-			response.sendRedirect("index.jsp");
+			response.sendRedirect(request.getContextPath());
 		} else if(cnt==9){
 			msg = "아이디 또는 비밀번호가 틀립니다.";
 			response.sendRedirect("UserLogin.do?msg="+msg);

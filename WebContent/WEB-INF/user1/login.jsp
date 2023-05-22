@@ -13,7 +13,7 @@
 </style>
 </head>
 <body>
-<%@ include file="./header.jsp" %>
+<%@ include file="../../header.jsp" %>
 <div class="content" style="padding-top:30px; margin-top:30px; border-top:3px solid #333; min-height:500px; ">
 	<div class="container-fluid">
 		<h2>로그인</h2>

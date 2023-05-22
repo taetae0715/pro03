@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>회원 가입 약관</title>
+<title>회원가입 이용약관</title>
 <style>
 .container-fluid { width:1280px; }
 .agree_fr { width: 900px; white-space:pre-wrap; margin: 10px auto; 
@@ -14,7 +14,7 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 </style>
 </head>
 <body>
-<%@ include file="./header.jsp" %>
+<%@ include file="../../header.jsp" %>
 <div class="content" style="padding-top:30px; margin-top:30px; border-top:3px solid #333; min-height:500px; ">
 	<h2 class="title" style="text-align: center;">회원 약관 동의</h2>
 	<article class="agree_fr">
