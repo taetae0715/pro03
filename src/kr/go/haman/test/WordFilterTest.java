@@ -1,6 +1,6 @@
 package kr.go.haman.test;
 
-import kr.go.haman.service.WordFilter;
+import kr.go.haman.util.WordFilter;
 
 import org.junit.Test;
 

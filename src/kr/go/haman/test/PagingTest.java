@@ -1,6 +1,6 @@
 package kr.go.haman.test;
 
-import kr.go.haman.service.Page;
+import kr.go.haman.util.Page;
 
 public class PagingTest {
 

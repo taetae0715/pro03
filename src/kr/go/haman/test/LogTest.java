@@ -11,7 +11,8 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 
-import kr.go.haman.service.AES256;
+
+import kr.go.haman.util.AES256;
 
 //import org.junit.Assert;
 import org.junit.Test;
