@@ -1,5 +1,5 @@
 -- create database haman;
--- USE haman;
+USE haman;
 set autocommit=true;
 -- show variables like 'autocommit';
 
@@ -29,8 +29,8 @@ create table USER1(ID	VARCHAR(20) PRIMARY KEY,
 			EMAIL VARCHAR(100), 	
 			REGDATE DATETIME DEFAULT NOW());
 
-select * from member;
-
+select * from user1;
+update user1 set pw='+4QnFJDuAUChRGMsLtt9//E9g11cc+9iZRyXU46RmW3Iri85F6Q6JiU2WETT8lRu6ZKG4A==' where id='tjtj';
 -- 공지사항 테이블
 create table NOTICE(NNO	VARCHAR(5) PRIMARY KEY,  
 			TITLE VARCHAR(50) NOT NULL, 

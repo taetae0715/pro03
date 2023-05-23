@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <title>회원가입 이용약관</title>
 <style>
 .container-fluid { width:1280px; }
@@ -905,11 +906,9 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 		<label for="ck_item2" class="form-check-label">개인정보처리방침에 동의</label><br><br>
 	</div><br><hr><br>
 	<div class="form-check" style="text-align:center;">
-		<label for="ck_item3" onclick="protocol()" class="form-check-label"><strong>전체 약관에 동의</strong></label>
-	</div>
-	<br><hr><br>	
-	<div class="btn-group" style="clear:both; width:960px; margin:20px auto;">
-		<button type="button" id="in_btn1" class="btn btn-primary" style="text-align: center;">다음 단계</button>
+		<label for="ck_item3" onclick="protocol()" class="form-check-label"><strong class="button is-text">전체 약관에 동의합니다.</strong></label>
+		&nbsp; &nbsp; 
+		<button type="button" id="in_btn1" class="button is-success" style="text-align: center;">다음 단계</button>
 	</div>
 	<script>
 	var ck_item1 = document.getElementById("ck_item1");
@@ -929,5 +928,6 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 	}
 	</script>
 </div>
+<%@ include file="../../footer.jsp" %>
 </body>
 </html>

@@ -19,7 +19,7 @@ public class AES256Test {
 	UnsupportedEncodingException, BadPaddingException, IllegalBlockSizeException, 
 	InvalidAlgorithmParameterException {
 		
-		String plainText = "1234";
+		String plainText = "0000";
 		String key = "%03x";
 		
 		System.out.println("MD5 : "+ plainText + ", 암호화 : "+AES256.md5(plainText));

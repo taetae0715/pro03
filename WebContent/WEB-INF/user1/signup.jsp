@@ -5,29 +5,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
 <title>회원가입</title>
 <style>
-.container-fluid { width:1280px; }
-.agree_fr { width: 900px; white-space:pre-wrap; margin: 10px auto; 
-padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
-.title { padding-top:36px; padding-bottom:20px; }
+.title { padding-top:36px; padding-bottom:10px; }
+#postcode { width: 480px; margin-right: 10px;}
+#id { width: 500px; margin-right: 10px;}
+.agree_fr { width: 900px; padding: 24px; margin: 10px auto; }
 </style>
 </head>
 <body>
 <%@ include file="../../header.jsp" %>
 <div class="content" style="padding-top:30px; margin-top:30px; border-top:3px solid #333; min-height:500px; ">
 	<section class="container-fluid">
-	<h2 class="title">회원가입</h2>
-	<form name="frm1" id="frm1" action="${path1 }/UserSignUpPro.do" method="post" onsubmit="return joinCheck(this)">
+	<h2 class="title" style="text-align: center;">회원가입</h2>
+	<article class="agree_fr">
+	<form name="frm1" id="frm1" class="box" action="${path1 }/UserSignUpPro.do" method="post" onsubmit="return joinCheck(this)">
 		<table class="table">
 			<tbody>
 				<tr>
-					<th>아이디</th>
+					<th id="idth">아이디</th>
 					<td>
 						<div class="form-row">
 							<input type="text" name="id" id="id" placeholder="영문소문자 및 숫자 조합" 
 							class="input" pattern="^[a-z0-9]{8,16}" maxlength="15" autofocus required />
-							<input type="button" class="btn btn-primary" value="아이디 중복 확인" onclick="idCheck()">
+							<input type="button" class="button is-info is-rounded" value="중복 확인" onclick="idCheck()">
 							<input type="hidden" name="idck" id="idck" value="no">
 						</div>
 						<div>
@@ -39,6 +41,10 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 							</c:if>
 						</div>
 					</td>
+				</tr>
+				<tr>
+					<th>이름<p id="subname">(개인,기업,단체)</p></th>
+					<td><input type="text" name="name" id="name" placeholder="이름 또는 개인, 기업, 단체명 입력" class="input" required /></td>
 				</tr>
 				<tr>
 					<th>비밀번호</th>
@@ -54,10 +60,6 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 					pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$" maxlength="16" required /></td>
 				</tr>
 				<tr>
-					<th>이름</th>
-					<td><input type="text" name="name" id="name" placeholder="이름 입력" class="input" required /></td>
-				</tr>
-				<tr>
 					<th>이메일</th>
 					<td><input type="email" name="email" id="email" placeholder="이메일 입력" class="input" required></td>
 				</tr>
@@ -67,16 +69,18 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 				</tr>
 				<tr>
 					<th>주소</th>
-					<td><input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="input" required /><br>
-					<input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="input" required /><br>
-					<input type="text" name="postcode" id="postcode" placeholder="우편번호" class="input">
-					<button id="post_btn" onclick="findAddr()" class="button is-info">우편번호 검색</button>
+					<td><input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="input" required  readonly /><br>
+					<input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="input" required  /><br>
+					<input type="text" name="postcode" id="postcode" placeholder="우편번호" class="input"  readonly>
+					<button id="post_btn" onclick="findAddr()" class="button is-info is-rounded">우편번호 검색</button>
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input type="submit" value="회원가입" class="btn btn-primary"/>
-						<input type="reset" value="취소" class="btn btn-default"/>
+						 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
+						<input type="submit" value="회원가입" class="button is-success"/>
+						&nbsp; &nbsp; &nbsp;
+						<input type="reset" value="취소" class="button is-light"/>
 					</td>
 				</tr>
 			</tbody>
@@ -141,7 +145,9 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 	}
 	</script>
 	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	</article>
 </section>
 </div>
+<%@ include file="../../footer.jsp" %>
 </body>
 </html>
