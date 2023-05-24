@@ -31,6 +31,7 @@ create table USER1(ID	VARCHAR(20) PRIMARY KEY,
 
 select * from user1;
 update user1 set pw='+4QnFJDuAUChRGMsLtt9//E9g11cc+9iZRyXU46RmW3Iri85F6Q6JiU2WETT8lRu6ZKG4A==' where id='tjtj';
+update user1 set addr='경기도 고양시 덕양구 도내동' where id='tjtj';
 -- 공지사항 테이블
 create table NOTICE(NNO	VARCHAR(5) PRIMARY KEY,  
 			TITLE VARCHAR(50) NOT NULL, 
@@ -81,6 +82,7 @@ create table 	FOOD(FNO VARCHAR(5) PRIMARY KEY,
 			FILE1 VARCHAR(1000) NOT NULL, 
 			REGDATE DATETIME DEFAULT NOW(),
 			VIEWS INT DEFAULT 0);
+select * from food;
             
 -- 숙소 테이블
 create table ACCOM(ANO VARCHAR(5) PRIMARY KEY, 
@@ -169,6 +171,14 @@ INSERT INTO food VALUES('50004','함안음식점4','경상남도 함안군','050
 INSERT INTO food VALUES('50005','함안음식점5','경상남도 함안군','0505-0505-0505','첨부파일 없음',DEFAULT,DEFAULT);
 INSERT INTO food VALUES('50006','함안음식점6','경상남도 함안군','0505-0606-0606','첨부파일 없음',DEFAULT,DEFAULT);
 select fno from food order by fno desc limit 1;
+update food set file1='50001.jpg' where fno='50001';
+update food set file1='50002.jpg' where fno='50002';
+update food set file1='50003.jpg' where fno='50003';
+update food set file1='50004.jpg' where fno='50004';
+update food set file1='50005.jpg' where fno='50005';
+update food set file1='50006.jpg' where fno='50006';
+
+
 -- 
 DESC accom;
 
@@ -178,6 +188,12 @@ INSERT INTO accom VALUES('60003','함안숙박업소3','경상남도 함안군',
 INSERT INTO accom VALUES('60004','함안숙박업소4','경상남도 함안군','070-0404-0404','첨부파일 없음',DEFAULT,DEFAULT);
 INSERT INTO accom VALUES('60005','함안숙박업소5','경상남도 함안군','070-0505-0505','첨부파일 없음',DEFAULT,DEFAULT);
 INSERT INTO accom VALUES('60006','함안숙박업소6','경상남도 함안군','070-0606-0606','첨부파일 없음',DEFAULT,DEFAULT);
+update accom set file1='60001.jpg' where ano='60001';
+update accom set file1='60002.jpg' where ano='60002';
+update accom set file1='60003.jpg' where ano='60003';
+update accom set file1='60004.jpg' where ano='60004';
+update accom set file1='60005.jpg' where ano='60005';
+update accom set file1='sleep_map.PNG' where ano='60006';
 
 SELECT * FROM notice ORDER BY nno DESC LIMIT 1;
 

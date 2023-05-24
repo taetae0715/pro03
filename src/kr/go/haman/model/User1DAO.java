@@ -188,4 +188,29 @@ public class User1DAO {
 		} finally { MySQL.close(pstmt, conn); }
 		return cnt;
 	}
+	
+	//나 불러오기 _ 암호제외
+	public User1 getUserFromId(User1 user){
+		try {
+			conn = MySQL.getConnection();
+			pstmt = conn.prepareStatement(MySQL.USER1_SELECT_FROM_ID);
+			pstmt.setString(1, user.getId());
+			rs = pstmt.executeQuery();
+			if(rs.next()){
+				user.setName(rs.getString("name"));
+				user.setAddr(rs.getString("addr"));
+				user.setTel(rs.getString("tel"));
+				user.setEmail(rs.getString("email"));
+				user.setRegdate(rs.getString("regdate"));
+			}
+			
+		} catch(ClassNotFoundException e) {
+			System.out.println("오라클JDBC 파일이 잘못되었습니다");
+		} catch(SQLException e) {
+			System.out.println("SQL구문이 잘못되었습니다");
+		} catch(Exception e){
+			System.out.println("식별할수 없는 오류가 발생했습니다.");
+		}
+		return user;
+	}
 }

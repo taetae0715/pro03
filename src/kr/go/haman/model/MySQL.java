@@ -14,6 +14,7 @@ public class MySQL {
 	
 	//회원 user1
 	public final static String USER1_SELECT_ALL = "select * from user1";	//회원 전체 목록
+	public static final String USER1_SELECT_FROM_ID = "select id, name, addr, tel, email, regdate from user1 where id=?";
 	public final static String USER1_LOGIN = "select * from user1 where id=?";	//로그인, 마이페이지 정보 출력
 	public final static String USER1_INSERT = "insert into user1 values(?,?,?,?,?,?,default)";	//회원가입
 	public final static String USER1_UPDATE1 = "update user1 set pw=?, addr=?, tel=?, email=? where id=?";	//회원정보 수정 비번O
