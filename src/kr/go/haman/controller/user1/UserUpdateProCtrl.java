@@ -62,7 +62,7 @@ public class UserUpdateProCtrl extends HttpServlet {
 		if(request.getParameter("address1")=="" || request.getParameter("address2")==""){
 			user.setAddr(request.getParameter("addr"));
 		} else {
-			user.setAddr(request.getParameter("address1")+" "+request.getParameter("address2"));
+			user.setAddr("("+request.getParameter("postcode")+") "+request.getParameter("address1")+", "+request.getParameter("address2"));
 		}
 		user.setTel(request.getParameter("tel"));
 		user.setEmail(request.getParameter("email"));

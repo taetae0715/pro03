@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>관광안내 > 관광지도 > 음식점 > 음식점 수정</title>
 <style>
 .title { padding-top:36px; padding-bottom:10px; }
@@ -48,8 +48,36 @@
 					</td>
 				</tr>
 				<tr>
-					<th>첨부파일</th>
-					<td><input type="file" name="file1" id="file1" value="${food.file1 }" required></td>
+					<th><label class="label" for="file1">첨부파일</label></th>
+					<td>
+						<input type="file" name="file1" id="file1" value="${food.file1 }" required>
+						<span>
+						<c:set var="lh" value="${fn:length(noti.file1) }" />
+						<c:set var="download" value="${fn:substring(noti.file1,5,lh) }" />
+						${download }
+						</span><br>
+						<input type="radio" name="fileSel" id="fileSel1" onclick="fileCall()" checked>교체 안 함<br> 
+						<input type="radio" name="fileSel" id="fileSel2" onclick="fileCall()" >교체<br>
+						<input type="file" name="file1" id="file1" class="">
+						<input type="hidden" name="file1" id="file2" value="${download }">
+						<script>
+						function fileCall(){
+							var fileSel1 = document.getElementById("fileSel1");
+							var fileSel2 = document.getElementById("fileSel2");
+							var file1 = document.getElementById("file1");
+							var file2 = document.getElementById("file2");
+							if(fileSel1.checked){
+								file1.style.display = "none";
+								file1.setAttribute("disabled");
+								file2.removeAttribute("disabled");
+							} else {
+								file1.style.display = "block";
+								file1.removeAttribute("disabled");
+								file2.setAttribute("disabled");
+							}
+						}
+						</script>		
+					</td>
 				</tr>
 				<tr>
 					<td colspan="2">

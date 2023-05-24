@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>관광안내 > 관광지도 > 숙박시설</title>
 <style>
 .title { padding-top:36px; padding-bottom:10px; }
@@ -37,7 +37,7 @@
 			      <div class="content">
 				      <br><h2>${accom.title }</h2>
 				        <p>
-				         	<strong><span>위치: </span></strong><span>${accom.addr }</span>
+				         	<strong><span>위치: </span></strong><span>${fn:substringAfter(accom.addr, ') ' )}</span>
 				          	<br>
 				         	<strong><span>전화번호: </span></strong><span>${accom.tel }</span>
 				          	<br>
@@ -47,6 +47,13 @@
         				  <a class="button is-link is-light" href="AccomUpdate.do"><strong>수정</strong></a>
         				  <a class="button is-light" href="AccomDel.do"><strong>삭제</strong></a>
         				</c:if>
+        				<script>
+						function delCheck(){
+							let message="해당 숙박시설 정보가 사라집니다. 정말로 삭제하시겠습니까?";
+							if(confirm(message)){ return true; } 
+							else { return false; }
+						}
+						</script>
 			      </div>
 			    <c:if test="${empty accomList }">
 					<strong>게시글이 존재하지 않습니다.</strong>

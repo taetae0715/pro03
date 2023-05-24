@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <title>관광안내 > 관광지도 > 음식점 > 음식점 등록</title>
 <style>
 .title { padding-top:36px; padding-bottom:10px; }
@@ -45,7 +45,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th>첨부파일</th>
+					<th><label class="label" for="file1">첨부파일</label></th>
 					<td><input type="file" name="file1" id="file1" required></td>
 				</tr>
 				<tr>
