@@ -4,7 +4,7 @@
 a { color: #333; }
 #level1 a { color: #fff; }
 #level2 a { margin-top: -70px; }
-#level3 span { display:block; margin-top: -70px; margin-left: 570px; font-size: 90%;}
+#level3 span { display:block; margin-top: -70px; margin-left: 500px; font-size: 90%;}
 .fix_area { position:fixed; z-index:9999; bottom:50px; right:50px; }
 .fix_area .cir_box { display:block; width: 60px; height: 60px; text-align:center; color:#fff;
 border-radius:35px; box-sizing: border-box; padding: 6px; font-size:15px; 
