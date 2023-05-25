@@ -29,8 +29,8 @@ public class MySQL {
 	public final static String FOOD_SELECT_ALL = "select * from food";	//전체 목록
 	public final static String FOOD_SELECT_ONE = "select * from food where fno=?";	//하나의 목록
 	public final static String FOOD_INSERT = "insert into food values(?,?,?,?,?,default,default)";	//등록
-	public final static String FOOD_UPDATE1 = "update food set title=?, addr=?, tel=?, file1=?, regdate=? where fno=?";	//수정 파일O
-	public final static String FOOD_UPDATE2 = "update food set title=?, addr=?, tel=?, regdate=? where fno=?";	//수정 파일X
+	public final static String FOOD_UPDATE1 = "update food set title=?, addr=?, tel=?, file1=? where fno=?";	//수정 파일O
+	public final static String FOOD_UPDATE2 = "update food set title=?, addr=?, tel=? where fno=?";	//수정 파일X
 	public final static String FOOD_DELETE = "delete from food where fno=?";	//회원 탈퇴
 	public final static String FOOD_FNOGENERATOR = "select fno from food order by fno desc limit 1";	//FNO 생성
 	public final static String FOOD_VIEWSUP = "update food set views=view+1 where fno=?";	//조회수 +1
@@ -39,8 +39,8 @@ public class MySQL {
 	public final static String ACCOM_SELECT_ALL = "select * from accom";	//전체 목록
 	public final static String ACCOM_SELECT_ONE = "select * from accom where ano=?";	//하나의 목록
 	public final static String ACCOM_INSERT = "insert into accom values(?,?,?,?,?,default,default)";	//등록
-	public final static String ACCOM_UPDATE1 = "update accom set title=?, addr=?, tel=?, file1=?, regdate=? where ano=?";	//수정 파일O
-	public final static String ACCOM_UPDATE2 = "update accom set title=?, addr=?, tel=?, regdate=? where ano=?";	//수정 파일X
+	public final static String ACCOM_UPDATE1 = "update accom set title=?, addr=?, tel=?, file1=? where ano=?";	//수정 파일O
+	public final static String ACCOM_UPDATE2 = "update accom set title=?, addr=?, tel=? where ano=?";	//수정 파일X
 	public final static String ACCOM_DELETE = "delete from accom where ano=?";	//회원 탈퇴
 	public final static String ACCOM_ANOGENERATOR = "select ano from accom order by ano desc limit 1";	//FNO 생성
 	public final static String ACCOM_VIEWSUP = "update accom set views=view+1 where ano=?";	//조회수 +1

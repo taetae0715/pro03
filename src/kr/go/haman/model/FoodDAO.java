@@ -104,20 +104,15 @@ public class FoodDAO {
 			conn = MySQL.getConnection();
 			if(food.getFile1()==null){
 				pstmt = conn.prepareStatement(MySQL.FOOD_UPDATE2);
-				pstmt.setString(1, food.getTitle());
-				pstmt.setString(2, food.getAddr());
-				pstmt.setString(3, food.getTel());
-				pstmt.setString(4, food.getRegdate());
-				pstmt.setString(5, food.getFno());
+				pstmt.setString(4, food.getFno());
 			} else {
 				pstmt = conn.prepareStatement(MySQL.FOOD_UPDATE1);
-				pstmt.setString(1, food.getTitle());
-				pstmt.setString(2, food.getAddr());
-				pstmt.setString(3, food.getTel());
 				pstmt.setString(4, food.getFile1());
-				pstmt.setString(5, food.getRegdate());
-				pstmt.setString(6, food.getFno());
+				pstmt.setString(5, food.getFno());
 			}
+			pstmt.setString(1, food.getTitle());
+			pstmt.setString(2, food.getAddr());
+			pstmt.setString(3, food.getTel());
 			cnt = pstmt.executeUpdate();
 		} catch (ClassNotFoundException e) { e.printStackTrace();
 		} catch (SQLException e) { e.printStackTrace();

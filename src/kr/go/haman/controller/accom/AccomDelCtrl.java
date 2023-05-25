@@ -11,23 +11,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.go.haman.dto.Accom;
+import kr.go.haman.dto.Food;
 import kr.go.haman.model.AccomDAO;
+import kr.go.haman.model.FoodDAO;
 
-@WebServlet("/Accom.do")
-public class AccomCtrl extends HttpServlet {
+@WebServlet("/AccomDel.do")
+public class AccomDelCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		
+		String ano = request.getParameter("ano");
 		AccomDAO dao = new AccomDAO();
-		ArrayList<Accom> AccomList = new ArrayList<Accom>();
-		AccomList = dao.getAccomList();
-		request.setAttribute("AccomList", AccomList);
-		
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/sub4/accom/accom.jsp");
-		view.forward(request, response);
+		int cnt = dao.deleteAccom(ano);
+
+		if(cnt>=1){
+			response.sendRedirect("Accom.do");
+		} else { 
+			response.sendRedirect("Accom.do");
+		}
 	}
 
 }

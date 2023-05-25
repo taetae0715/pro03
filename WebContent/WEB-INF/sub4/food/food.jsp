@@ -16,7 +16,7 @@
 </style>
 </head>
 <body>
-<%@ include file="../../../header.jsp" %>
+<%@ include file="/header.jsp" %>
 <div class="content" style="padding-top:30px; margin-top:30px; border-top:3px solid #333; min-height:500px; ">
 	<div class="container-fluid">
 		<h2 class="title" style="text-align: center;">함안 맛집 소개
@@ -65,6 +65,6 @@
 		</article>		
 	</div>
 </div>
-<%@ include file="../../../footer.jsp" %>
+<%@ include file="/footer.jsp" %>
 </body>
 </html>

@@ -71,7 +71,7 @@
 					<th><label class="label" for="post_btn">주소</label></th>
 					<td>
 					<input type="text" name="postcode" id="postcode" placeholder="우편번호" class="input"  readonly>
-					<button id="post_btn" onclick="findAddr()" class="button is-info is-rounded">우편번호 검색</button>
+					<button type="button" id="post_btn" onclick="findAddr()" class="button is-info is-rounded">우편번호 검색</button>
 					<input type="text" name="address1" id="address1" placeholder="기본 주소" class="input" required  readonly /><br>
 					<input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="input" required  /><br>
 					</td>
@@ -81,7 +81,8 @@
 						 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
 						<input type="submit" value="회원가입" class="button is-info"/>
 						&nbsp; &nbsp; &nbsp;
-						<input type="reset" value="취소" class="button is-light"/>
+						<a href="javascript:history.go(-1)" class="button is-light">취소</a>
+						<!-- <input type="reset" value="초기화" class="button is-ghost"/> -->
 					</td>
 				</tr>
 			</tbody>

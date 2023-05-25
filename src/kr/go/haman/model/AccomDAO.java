@@ -127,7 +127,7 @@ public class AccomDAO {
 	}
 	
 	//글 삭제
-	public int deleteFood(String ano){
+	public int deleteAccom(String ano){
 		int cnt = 0;
 		try {
 			conn = MySQL.getConnection();

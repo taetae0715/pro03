@@ -17,8 +17,8 @@
 <body>
 <%@ include file="../../header.jsp" %>
 <div class="page" id="msg">
-	<hr><br><br>
-	<strong>메인 슬라이드 영역</strong>
+	<hr>
+	<img alt="main image" src="${path1 }/img/main1.jpg">
 	<br><br><br><hr>
 	<br><br><br>
 	<strong>공지사항 함안소식 / 슬라이드(선택)</strong>

@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관광안내 > 관광지도 > 음식점 > 음식점 등록</title>
+<title>관광안내 > 관광지도 > 숙박시설 > 숙박시설 등록</title>
 <style>
 .title { padding-top:36px; padding-bottom:10px; }
 .agree_fr { width: 1000px; padding: 24px; margin: 10px auto; }
@@ -20,9 +20,9 @@
 <%@ include file="../../../header.jsp" %>
 <div class="content" style="padding-top:30px; margin-top:30px; border-top:3px solid #333; min-height:500px; ">
 	<div class="container-fluid">
-	<h2 class="title" style="text-align: center;">함안 맛집 등록</h2>
+	<h2 class="title" style="text-align: center;">함안 숙박시설 등록</h2>
 	<article class="agree_fr">
-		<form action="${path1 }/FoodAddPro.do" method="post" enctype="multipart/form-data" class="box">
+		<form action="${path1 }/AccomAddPro.do" method="post" enctype="multipart/form-data" class="box">
 		<table class="table">
 			<tbody>
 				<tr>

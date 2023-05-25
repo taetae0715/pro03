@@ -11,6 +11,7 @@
 <title>내 정보 수정</title>
 <style>
 .title { padding-top:36px; padding-bottom:10px; }
+th { width: 150px; }
 #postcode { width: 480px; margin-right: 10px;}
 .agree_fr { width: 900px; padding: 24px; margin: 10px auto; }
 </style>
@@ -59,8 +60,8 @@
 					<td>
 					<c:set var="addr1234" value="${fn:substringAfter(user.addr, ' ' )}"/>
 					<input type="hidden" name="addr" id="addr" value="${user.addr }" />
-					<input type="text" name="postcode" id="postcode" placeholder="우편번호" class="input" value="${fn:substringBefore(user.addr, ' ' )}" readonly>
-					<button id="post_btn" onclick="findAddr()" class="button is-info is-rounded">우편번호 검색</button>
+					<input type="text" name="postcode" id="postcode" placeholder="우편번호" class="input" value="${fn:substring(user.addr, 1, 6 )}" readonly>
+					<button type="button" id="post_btn" onclick="findAddr()" class="button is-info is-rounded">우편번호 검색</button>
 					<input type="text" name="address1" id="address1" placeholder="기본 주소" class="input" value="${fn:substringBefore(addr1234, ',' )}" required readonly /><br>
 					<input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="input" value="${fn:substringAfter(user.addr, ', ' )}" required  /><br>
 					</td>
@@ -70,7 +71,8 @@
 						 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
 						<input type="submit" value="수정 완료" class="button is-success"/>
 						&nbsp; &nbsp; &nbsp;
-						<input type="reset" value="취소" class="button is-light"/>
+						<a href="javascript:history.go(-1)" class="button is-light">취소</a>
+						<!-- <input type="reset" value="초기화" class="button is-ghost"/> -->
 					</td>
 				</tr>
 			</tbody>

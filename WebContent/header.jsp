@@ -70,7 +70,7 @@
           <a class="navbar-item" href="">포토갤러리</a>
           <hr class="navbar-divider">
           <span class="navbar-item"><strong>관광지도</strong></span>
-          <a class="navbar-item" href="">전통시장</a>
+          <a class="navbar-item" href="Market.do">전통시장</a>
           <a class="navbar-item" href="Food.do">음식점</a>
           <a class="navbar-item" href="Accom.do">숙박시설</a>
           <hr class="navbar-divider">

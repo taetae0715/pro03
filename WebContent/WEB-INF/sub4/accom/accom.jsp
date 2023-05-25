@@ -16,7 +16,7 @@
 </style>
 </head>
 <body>
-<%@ include file="../../../header.jsp" %>
+<%@ include file="/header.jsp" %>
 <div class="content" style="padding-top:30px; margin-top:30px; border-top:3px solid #333; min-height:500px; ">
 	<div class="container-fluid">
 		<h2 class="title" style="text-align: center;">함안 숙박시설 소개
@@ -26,26 +26,26 @@
         </h2>
 		<article class="agree_fr">
 			<div class="box">
-				<c:forEach var="accom" items="${accomList }">
+				<c:forEach var="Accom" items="${AccomList }">
 			  <article class="media">
 			    <div class="media-left">
 			      <figure>
-			        <img src='${path1 }/data/accom/${accom.file1 }' alt="${accom.title }" class="image">
+			        <img src='${path1 }/data/accom/${Accom.file1 }' alt="${Accom.title }" class="image">
 			      </figure>
 			    </div>
 			    <div class="media-content">
 			      <div class="content">
-				      <br><h2>${accom.title }</h2>
+				      <br><h2>${Accom.title }</h2>
 				        <p>
-				         	<strong><span>위치: </span></strong><span>${fn:substringAfter(accom.addr, ') ' )}</span>
+				         	<strong><span>위치: </span></strong><span>${fn:substringAfter(Accom.addr, ') ' )}</span>
 				          	<br>
-				         	<strong><span>전화번호: </span></strong><span>${accom.tel }</span>
+				         	<strong><span>전화번호: </span></strong><span>${Accom.tel }</span>
 				          	<br>
 				        </p>
 			          	<a class="button is-info" href="" >길찾기</a>
-			      		<c:if test="${sid=='admin' }">
-        				  <a class="button is-link is-light" href="AccomUpdate.do"><strong>수정</strong></a>
-        				  <a class="button is-light" href="AccomDel.do"><strong>삭제</strong></a>
+			          	<c:if test="${sid=='admin' }">
+        				  <a class="button is-link is-light" href="${path1 }/AccomUpdate.do?ano=${Accom.ano }"><strong>수정</strong></a>
+        				  <a class="button is-light" href="${path1 }/AccomDel.do?ano=${Accom.ano }" onclick="return delCheck()"><strong>삭제</strong></a>
         				</c:if>
         				<script>
 						function delCheck(){
@@ -55,7 +55,7 @@
 						}
 						</script>
 			      </div>
-			    <c:if test="${empty accomList }">
+			    <c:if test="${empty AccomList }">
 					<strong>게시글이 존재하지 않습니다.</strong>
 				</c:if>	
 			    </div>
@@ -65,6 +65,6 @@
 		</article>		
 	</div>
 </div>
-<%@ include file="../../../footer.jsp" %>
+<%@ include file="/footer.jsp" %>
 </body>
 </html>
