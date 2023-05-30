@@ -2,7 +2,7 @@
 USE haman;
 set autocommit=true;
 -- show variables like 'autocommit';
-
+show tables;
 
 -- CREATE TABLE test01(id VARCHAR(20) PRIMARY KEY, pw VARCHAR(20) NOT NULL, regdate DATEtime DEFAULT now(), num INT);
 -- mysql에서는 date가 date이다

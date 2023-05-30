@@ -30,5 +30,13 @@
     <url-pattern>*.webp</url-pattern>
     <url-pattern>*.ico</url-pattern>
     <url-pattern>*.icon</url-pattern>
+   	<url-pattern>*.swf</url-pattern>
+    <url-pattern>*.jfif</url-pattern>
+    <url-pattern>*.xls</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>jsp</servlet-name>
+    <url-pattern>*.jsp</url-pattern>
+    <url-pattern>*.jspx</url-pattern>
   </servlet-mapping>
 </web-app>
