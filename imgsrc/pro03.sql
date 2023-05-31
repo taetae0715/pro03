@@ -83,6 +83,7 @@ create table 	FOOD(FNO VARCHAR(5) PRIMARY KEY,
 			REGDATE DATETIME DEFAULT NOW(),
 			VIEWS INT DEFAULT 0);
 select * from food;
+alter table food add point float default 0;  
             
 -- 숙소 테이블
 create table ACCOM(ANO VARCHAR(5) PRIMARY KEY, 
@@ -92,6 +93,13 @@ create table ACCOM(ANO VARCHAR(5) PRIMARY KEY,
 			FILE1 VARCHAR(1000) NOT NULL, 
 			REGDATE	DATETIME DEFAULT NOW(),
 			VIEWS INT DEFAULT 0);
+  desc accom;          
+alter table accom add point float default 0;    
+      
+-- 리뷰 테이블
+create table review(rno varchar(5) primary key,wno varchar(5) not null, 
+	id varchar(20), point float not null default 5 , content varchar(1000),
+    FOREIGN KEY(ID) REFERENCES USER1(ID));            
 
 -- 회원 더미 데이터
 insert into 	USER1	 values('admin','관리자','1234','경기도 고양시','010-0000-0000','admin@naver.com',default);

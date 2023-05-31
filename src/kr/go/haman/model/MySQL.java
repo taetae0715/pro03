@@ -28,7 +28,7 @@ public class MySQL {
 	//함안맛집 food
 	public final static String FOOD_SELECT_ALL = "select * from food";	//전체 목록
 	public final static String FOOD_SELECT_ONE = "select * from food where fno=?";	//하나의 목록
-	public final static String FOOD_INSERT = "insert into food values(?,?,?,?,?,default,default)";	//등록
+	public final static String FOOD_INSERT = "insert into food values(?,?,?,?,?,default,default,default)";	//등록
 	public final static String FOOD_UPDATE1 = "update food set title=?, addr=?, tel=?, file1=? where fno=?";	//수정 파일O
 	public final static String FOOD_UPDATE2 = "update food set title=?, addr=?, tel=? where fno=?";	//수정 파일X
 	public final static String FOOD_DELETE = "delete from food where fno=?";	//회원 탈퇴
@@ -38,7 +38,7 @@ public class MySQL {
 	//숙박시설 accom
 	public final static String ACCOM_SELECT_ALL = "select * from accom";	//전체 목록
 	public final static String ACCOM_SELECT_ONE = "select * from accom where ano=?";	//하나의 목록
-	public final static String ACCOM_INSERT = "insert into accom values(?,?,?,?,?,default,default)";	//등록
+	public final static String ACCOM_INSERT = "insert into accom values(?,?,?,?,?,default,default,default)";	//등록
 	public final static String ACCOM_UPDATE1 = "update accom set title=?, addr=?, tel=?, file1=? where ano=?";	//수정 파일O
 	public final static String ACCOM_UPDATE2 = "update accom set title=?, addr=?, tel=? where ano=?";	//수정 파일X
 	public final static String ACCOM_DELETE = "delete from accom where ano=?";	//회원 탈퇴

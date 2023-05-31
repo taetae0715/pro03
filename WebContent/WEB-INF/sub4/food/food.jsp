@@ -13,6 +13,12 @@
 .title { padding-top:36px; padding-bottom:10px; }
 .agree_fr { width: 1000px; padding: 24px; margin: 10px auto; }
 .image { display: block; width: 300px; height: 250px; }
+/* 추가부분 */
+.blank {clear:left; height:50px;}
+
+.pagelist {clear:both; width:560px;height:50px; margin:0 auto; background-color:green}
+.listboxc {cursor:pointer;width:50px;height:50px;border: 1px solid rgb(224, 224, 224); float:left;margin-right:20px;text-align:center;line-height:50px}
+.listbox {width:50px;height:50px;border: 1px solid rgb(224, 224, 224); float:left;margin-right:20px;text-align:center;line-height:50px}
 </style>
 </head>
 <body>
@@ -42,7 +48,8 @@
 				         	<strong><span>전화번호: </span></strong><span>${food.tel }</span>
 				          	<br>
 				        </p>
-			          	<a class="button is-info" href="" >길찾기</a>
+			          	<input type="button" class="button is-info" onclick="findaddr(${food.fno })" value="길찾기">
+			          	
 			          	<c:if test="${sid=='admin' }">
         				  <a class="button is-link is-light" href="${path1 }/FoodUpdate.do?fno=${food.fno }"><strong>수정</strong></a>
         				  <a class="button is-light" href="${path1 }/FoodDel.do?fno=${food.fno }" onclick="return delCheck()"><strong>삭제</strong></a>
@@ -55,6 +62,60 @@
 						}
 						</script>
 			      </div>
+			      			      <!--  -->
+			      <div style="float:right">
+			      		평가한사람 ${food.views} 명
+			      		평균점수 <br>
+			      		<c:set var="point" value="${food.point/food.views}" />
+			      		<c:choose>
+			      			<c:when test="${point>5 }">
+			      			작성된 리뷰가 없습니다<br>
+			      			<img src="${path1 }/img/review/star.PNG">
+			      			</c:when>
+			      			<c:when test="${point>4.5 }">
+			      			<img src="${path1 }/img/review/star_50.png">
+			      			</c:when>
+			      			<c:when test="${point>4 }">
+			      			<img src="${path1 }/img/review/star_45.png">
+			      			</c:when>
+			      			<c:when test="${point>3.5 }">
+			      			<img src="${path1 }/img/review/star_40.png">
+			      			</c:when>
+			      			<c:when test="${point>3 }">
+			      			<img src="${path1 }/img/review/star_35.png">
+			      			</c:when>
+			      			<c:when test="${point>2.5 }">
+			      			<img src="${path1 }/img/review/star_30.png">
+			      			</c:when>
+			      			<c:when test="${point>2 }">
+			      			<img src="${path1 }/img/review/star_25.png">
+			      			</c:when>
+			      			<c:when test="${point>1.5 }">
+			      			<img src="${path1 }/img/review/star_20.png">
+			      			</c:when>
+			      			<c:when test="${point>1 }">
+			      			<img src="${path1 }/img/review/star_15.png">
+			      			</c:when>
+			      			<c:when test="${point>0.5 }">
+			      			<img src="${path1 }/img/review/star_1.png">
+			      			</c:when>
+			      			<c:when test="${point>0 }">
+			      			<img src="${path1 }/img/review/star_05.png">
+			      			</c:when>
+			      			<c:otherwise>
+			      			작성된 리뷰가 없습니다<br>
+			      			<img src="${path1 }/img/review/star.PNG">
+			      			</c:otherwise>
+
+			      		</c:choose>
+						<c:if test="${point>=0 && point<=5}">
+			      		<fmt:formatNumber pattern="#.##" value="${food.point/food.views}" />
+			      		</c:if>
+			      		<c:if test="${sid!=null }">
+			      		<input type="button" class="button is-info" value="별점주기" onclick="reviewpage(${food.fno })">
+			          	</c:if>
+			          	</div>
+			      <!--  -->
 			    <c:if test="${empty foodList }">
 					<strong>게시글이 존재하지 않습니다.</strong>
 				</c:if>	
@@ -65,6 +126,56 @@
 		</article>		
 	</div>
 </div>
+
+<!-- 추가부분 -->
+<script>
+function findaddr(fno){
+		var popX = (window.screen.width / 2) - (1100 / 2);
+		var popY= (window.screen.height / 2) - (720 / 2);
+		var fno = fno
+		window.open("${path1 }/GoFoodMap.do?fno="+fno,"길 찾기","status=no,toolbar=no,scrollbars=no, width=1100, height=720,left="+ popX + ", top="+ popY);
+}
+</script>
+<!-- 0529 리뷰 추가부분 -->
+<script>
+function reviewpage(wno){
+	var popX = (window.screen.width / 2) - (600 / 2);
+	var popY= (window.screen.height / 2) - (200 / 2);
+	var wno = wno
+	window.open("${path1 }/ReviewCtrl.do?wno="+wno,"길 찾기","status=no,toolbar=no,scrollbars=no, width=600, height=200,left="+ popX + ", top="+ popY);
+}
+</script>
+
+	<div class="blank"></div>
+		<c:set var="listwidth" value="${(pvo.nowBlockLastPage-pvo.startPage+3)*70-20}"/>
+		<div class="pagelist" style="width: ${listwidth}px;height:100%">
+			<c:if test="${pvo.priv!=' X ' }">
+			<div class="listboxc" onclick="location.href='${path1 }/Food.do?nowpage=${pvo.startPage-1}'">
+			이전
+			</div>
+			</c:if>
+			<c:if test="${pvo.priv==' X ' }">
+			<div class="listbox">
+			이전
+			</div>
+			</c:if>
+			
+		<c:forEach var="x" begin="${pvo.startPage}" end="${pvo.nowBlockLastPage}" step="1">
+		<div class="listboxc" onclick="location.href='${path1 }/Food.do?nowPage=${x }'">${x }</div>
+		</c:forEach>
+			<c:if test="${pvo.next!=' X ' }">
+			<div class="listboxc" onclick="location.href='${path1 }/Food.do?nowpage=${pvo.nowBlockLastPage+1}'" style="margin-right:0">
+			다음
+			</div>
+			</c:if>
+			<c:if test="${pvo.priv==' X ' }">
+			<div class="listbox" style="margin-right:0">
+			다음
+			</div>
+			</c:if>
+		</div>
+<div class="blank"></div>
+<!--  -->
 <%@ include file="/footer.jsp" %>
 </body>
 </html>

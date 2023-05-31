@@ -9,6 +9,7 @@ public class Accom {
 	private	String	regdate;
 	private	int	views;
 	private float point;
+	
 	@Override
 	public String toString() {
 		return "Accom [ano=" + ano + ", title=" + title + ", addr=" + addr

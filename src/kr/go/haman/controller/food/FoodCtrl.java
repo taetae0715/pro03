@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.go.haman.dto.Food;
 import kr.go.haman.model.FoodDAO;
+import kr.go.haman.vo.PageVO;
 
 @WebServlet("/Food.do")
 public class FoodCtrl extends HttpServlet {
@@ -23,9 +24,33 @@ public class FoodCtrl extends HttpServlet {
 		
 		FoodDAO dao = new FoodDAO();
 		ArrayList<Food> foodList = new ArrayList<Food>();
-		foodList = dao.getFoodList();
+		PageVO pvo =new PageVO();
+		pvo.setNowPage(1);
+		//System.out.println("나우페이지 값"+request.getParameter("nowPage"));
+		if(request.getParameter("nowPage")!=null){
+			 pvo.setNowPage(Integer.parseInt(request.getParameter("nowPage")));
+		}
+		int vR = 5;
+		int vP = 5;
+		pvo.setViewRecord(vR);
+		pvo.setViewPage(vP);
+		foodList = dao.getSelectAllForPage(pvo);
 		request.setAttribute("foodList", foodList);
-		
+		//pvo = pagedao.getPageNum(pvo);
+		pvo.getAllPage();
+		pvo.getAllPageBlock();
+		pvo.getStartPage();
+		pvo.getNowBlockLastPage();
+		pvo.getNext();
+		pvo.getPriv();
+		request.setAttribute("pvo", pvo);
+/*		System.out.println(pvo.getAllPage());
+		System.out.println(pvo.getAllPageBlock());
+		System.out.println(pvo.getStartPage());
+		System.out.println(pvo.getNowBlockLastPage());
+		System.out.println(pvo.getNext());
+		System.out.println(pvo.getPriv());*/
+				
 		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/sub4/food/food.jsp");
 		view.forward(request, response);
 	}

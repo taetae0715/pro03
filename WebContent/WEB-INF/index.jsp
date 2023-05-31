@@ -86,8 +86,8 @@
     <c:if test="${note.nno == '20014' || note.nno == '20013' || note.nno == '20015'}">
     <article class="media">
       <figure class="media-left">
-        <p class="image is-128x128">
-          <img src="${note.file1 }">
+        <p class="imageis">
+          <img src="${note.file1 }" style="width: 200px; height: 220px;">
         </p>
       </figure>
       <div class="media-content">
