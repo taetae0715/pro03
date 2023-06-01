@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>민원게시판</title>
+<title>공지사항 > 함안소식</title>
 <style>
 .main_wrap {width:1000px; margin:0 auto;min-height:700px}
 .blank {height:100px}
@@ -21,6 +21,7 @@ tr {margin-left:20px}
 .pagelist {clear:both; width:560px;height:50px; margin:0 auto; background-color:green}
 .listboxc {cursor:pointer;width:50px;height:50px;border: 1px solid rgb(224, 224, 224); float:left;margin-right:20px;text-align:center;line-height:50px}
 .listbox {width:50px;height:50px;border: 1px solid rgb(224, 224, 224); float:left;margin-right:20px;text-align:center;line-height:50px}
+#notiimg { max-height: 200px; width: 230px; }
 </style>
 <script type="text/javascript">
   $(document).ready(function(){
@@ -39,14 +40,14 @@ tr {margin-left:20px}
 <div class="blank"></div>
 
 <div class="main_wrap">
-	<h3 class="title is-3 min" style="color:rgb(0,154,218)">●공지사항</h3>
+	<h3 class="title is-3 min" style="color:rgb(0,154,218)">● 공지사항</h3>
 
 	<table class="table is-hoverable" style="width:100%">
 		<c:forEach items="${notList }" var="note">
 		<tr>
 			<c:if test="${!empty note.file1}">
 			<th style="width:30%">
-			<img src="${note.file1 }">
+			<img id="notiimg" src="${path1 }/data/notice/${note.file1 }">
 			</th>
 			<td >
 			<a href="${path1 }/GoNoticeDetail.do?nno=${note.nno}">

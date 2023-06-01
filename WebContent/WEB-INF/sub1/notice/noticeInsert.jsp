@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>민원게시판</title>
+<title>함안소식 등록</title>
 <style>
 .main_wrap {width:1000px; margin:0 auto;min-height:700px}
 .blank {height:100px}
@@ -25,7 +25,7 @@ tr {margin-left:20px}
 <div class="blank"></div>
 
 <div class="main_wrap">
-	<h3 class="title is-3 min" style="color:rgb(0,154,218)">●공지사항 글 쓰기</h3>
+	<h3 class="title is-3 min" style="color:rgb(0,154,218)">● 공지사항 글 쓰기</h3>
 	<form action="${path1 }/NoticeInsert.do" method="post" enctype="multipart/form-data">
 		<table class="table is-hoverable" style="width:100%">
 		<tr>
@@ -37,19 +37,19 @@ tr {margin-left:20px}
 			<h3 class="title is-3 min" style="line-height:48.8px" >제목</h3>
 		</th>
 		<td>
-			<input class="input is-medium" type="text" name="title" placeholder="제목을 입력해 주세요">	
+			<input class="input is-medium" type="text" name="title" placeholder="제목을 입력해 주세요" required>	
 		</td>
 		</tr>
 		
 		<tr>
 		<th colspan="2">
 			<h5 class="title is-5 min" >본문내용</h5>
-			<textarea style="width:100%;height:400px" name="content" placeholder="내용을 입력해 주세요"></textarea>
+			<textarea style="width:100%;height:400px" name="content" placeholder="내용을 입력해 주세요" required></textarea>
 		</th>
 		</tr>
 		<tr>
 		<td colspan="2">
-		<input type="file" name="file1">
+		<input type="file" name="file1"> - 대표 이미지로 설정됩니다
 		</td>
 		</tr>
 		<tr>

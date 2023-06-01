@@ -42,9 +42,9 @@
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">축제행사</a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="Event1.do">함안수박축제</a>
-          <a class="navbar-item" href="Event2.do">함안낙화놀이</a>
-          <a class="navbar-item" href="Event3.do">해바라기축제</a>
+          <a class="navbar-item" href="${path }/Event1.do">함안수박축제</a>
+          <a class="navbar-item" href="${path }/Event2.do">함안낙화놀이</a>
+          <a class="navbar-item" href="${path }/Event3.do">해바라기축제</a>
         </div>
       </div>
       <div class="navbar-item has-dropdown is-hoverable">
@@ -74,9 +74,9 @@
           <a class="navbar-item" href="${path }/PhotoList.do">포토갤러리</a>
           <hr class="navbar-divider">
           <span class="navbar-item"><strong>관광지도</strong></span>
-          <a class="navbar-item" href="Market.do">전통시장</a>
-          <a class="navbar-item" href="Food.do">음식점</a>
-          <a class="navbar-item" href="Accom.do">숙박시설</a>
+          <a class="navbar-item" href="${path }/Market.do">전통시장</a>
+          <a class="navbar-item" href="${path }/Food.do">음식점</a>
+          <a class="navbar-item" href="${path }/Accom.do">숙박시설</a>
           <hr class="navbar-divider">
 		<span class="navbar-item"><strong>교통안내</strong></span>
 		<a class="navbar-item" href="${path }/Traffic1.do">시내/시외버스</a>

@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>민원게시판</title>
+<title>함안소식 자세히 보기</title>
 <style>
 .main_wrap {width:1000px; margin:0 auto;min-height:700px}
 .blank {height:100px}
@@ -36,15 +36,16 @@ tr {margin-left:20px}
 		<c:if test="${fileName !=null }">
 		<tr>
 		<td colspan="3">
-		<span style="margin-right:10px">${fileName }</span><a href="${notice.file2 }" class="button is-info is-small" download>다운로드</a>
+		<span style="margin-right:10px">${fileName }</span><a href="${path1 }/data/notice/${notice.file2 }" class="button is-info is-small" download>다운로드</a>
+		<%-- <span style="margin-right:10px">${fileName }</span><a href="${path1 }/data/notice/${notice.file3 }" class="button is-info is-small" download>다운로드</a> --%>
 		</td>
 		</tr>
 		</c:if>
 		<tr>
-		<td colspan="3">${notice.content }
+		<td colspan="3"><pre style="background-color:transparent">${notice.content }</pre>
 		<span><br><br></span>
-		<c:if test="${!empty notice.file3 }">
-		<img src="${notice.file3 }" style="width:100%;height:auto">
+		<c:if test="${!empty notice.file1 }">
+		<img src="${path1 }/data/notice/${notice.file1 }" style="width:100%;height:auto">
 		</c:if>
 		<br>
 		</td>

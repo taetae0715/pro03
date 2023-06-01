@@ -48,13 +48,16 @@ public class NoticeInsertCtrl extends HttpServlet {
 		file3=multi.getFilesystemName("file3");
 		
 		if(file1!=null){
-			notice.setFile1("data/notice/"+file1);
+			notice.setFile1(file1);
+			//notice.setFile1("data/notice/"+file1);
 		}
 		if(file2!=null){
-			notice.setFile2("data/notice/"+file2);
+			notice.setFile2(file2);
+			//notice.setFile2("data/notice/"+file2);
 		}
 		if(file3!=null){
-			notice.setFile3("data/notice/"+file3);
+			notice.setFile3(file3);
+			//notice.setFile3("data/notice/"+file3);
 		}
 		
 		}catch(Exception e){

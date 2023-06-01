@@ -25,7 +25,7 @@ tr {margin-left:20px}
 <div class="blank"></div>
 
 <div class="main_wrap">
-	<h3 class="title is-3 min" style="color:rgb(0,154,218)">●포토갤러리</h3>
+	<h3 class="title is-3 min" style="color:rgb(0,154,218)">● 포토갤러리</h3>
 		<table class="table is-hoverable" style="width:100%">
 		<tr>
 		<th colspan="3">
@@ -51,12 +51,12 @@ tr {margin-left:20px}
 		</tr>
 		<tr>
 		<td colspan="3">
-		<img src="${pt.file1 }">
+		<img src="${path1 }/data/photog/${pt.file1 }">
 		</td>
 		</tr>
 		<tr>
 		<td colspan="3">
-		<img src="${pt.file2 }">
+		<img src="${path1 }/data/photog/${pt.file2 }">
 		</td>
 		</tr>
 		<tr style="text-align:center">

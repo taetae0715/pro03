@@ -58,11 +58,6 @@
 		</table>
 		</div>
 		</section>
-		<c:if test="${!empty sid }">
-		<div class="btn-group">
-			<a href="${path1 }/InsertUser.do" class="btn btn-primary">회원 등록</a>
-		</div>
-		</c:if>
 	</div>
 </div>
 <%@ include file="../../footer.jsp" %>

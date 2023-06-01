@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>민원게시판</title>
+<title>민원 답변 등록</title>
 <style>
 .main_wrap {width:1000px; margin:0 auto;}
 .blank {height:100px}
@@ -26,7 +26,7 @@ tr {margin-left:20px}
 <div class="blank"></div>
 
 <div class="main_wrap">
-	<h3 class="title is-3 min" style="color:rgb(0,154,218)">●고객 민원 답변</h3>
+	<h3 class="title is-3 min" style="color:rgb(0,154,218)">● 고객 민원 답변</h3>
 	<div class="divide">고객의 민원 내용</div>
 	
 		<table class="table is-fullwidth">
@@ -95,7 +95,7 @@ tr {margin-left:20px}
 			<table class="table is-fullwidth">
 			<tr>
 			<th>
-			<span class="colred">*</span> 민원 제목
+			<span class="colred">*</span> 답변 제목
 			</th>
 			<td>
 			<input type="text" name="title" placeholder="내용을 입력해주세요" required>
@@ -103,7 +103,7 @@ tr {margin-left:20px}
 			</tr>
 			<tr>
 			<th>
-			<span class="colred">*</span> 민원 내용
+			<span class="colred">*</span> 답변 내용
 			</th>
 			<td>
 			<textarea rows="20" cols="100" name="content" placeholder="내용을 입력해주세요" required></textarea>

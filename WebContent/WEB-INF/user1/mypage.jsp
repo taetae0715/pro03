@@ -61,7 +61,7 @@ td { width: 300px; }
 						 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
 							<a href="${path1 }/UserUpdate.do?id=${user.id}" class="button is-success">정보 수정</a>
 							&nbsp; &nbsp; &nbsp; &nbsp;
-							<a href="${path1 }/ComplainList.do?id=${user.id}" class="button is-warning">나의 민원</a>
+							<a href="${path1 }/GoComplainList.do?id=${user.id}" class="button is-warning">나의 민원</a>
 							&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 							<a href="${path1 }/UserDelete.do?id=${user.id}" class="button is-danger is-light" onclick="return delCheck()">회원 탈퇴</a>
 						</td>

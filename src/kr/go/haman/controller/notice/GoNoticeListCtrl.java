@@ -32,7 +32,7 @@ public class GoNoticeListCtrl extends HttpServlet {
 		if(request.getParameter("nowPage")!=null){
 			 pvo.setNowPage(Integer.parseInt(request.getParameter("nowPage")));
 		}
-		int vR = 10;
+		int vR = 5;
 		int vP = 5;
 		pvo.setViewRecord(vR);
 		pvo.setViewPage(vP);

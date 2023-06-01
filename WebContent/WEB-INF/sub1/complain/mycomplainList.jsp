@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>민원게시판</title>
+<title>공지사항 > 고객민원</title>
 <style>
 .main_wrap {width:1000px; margin:0 auto;min-height:700px}
 .blank {height:100px}
@@ -25,8 +25,8 @@ tr {margin-left:20px}
 <div class="blank"></div>
 
 <div class="main_wrap">
-	<c:if test="${sid == 'admin' }"><h3 class="title is-3 min" style="color:rgb(0,154,218)">●민원 목록</h3></c:if>
-	<c:if test="${sid != 'admin' }">	<h3 class="title is-3 min" style="color:rgb(0,154,218)">●나의 민원 목록</h3></c:if>
+	<c:if test="${sid == 'admin' }"><h3 class="title is-3 min" style="color:rgb(0,154,218)">● 민원 목록</h3></c:if>
+	<c:if test="${sid != 'admin' }">	<h3 class="title is-3 min" style="color:rgb(0,154,218)">● 나의 민원 목록</h3></c:if>
 
 	<table class="table is-fullwidth">
 		<tr>

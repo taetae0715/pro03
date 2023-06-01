@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>민원게시판</title>
+<title>함안소식 수정</title>
 <style>
 .main_wrap {width:1000px; margin:0 auto;min-height:700px}
 .blank {height:100px}
@@ -25,7 +25,7 @@ tr {margin-left:20px}
 <div class="blank"></div>
 
 <div class="main_wrap">
-	<h3 class="title is-3 min" style="color:rgb(0,154,218)">●공지사항 글 수정</h3>
+	<h3 class="title is-3 min" style="color:rgb(0,154,218)">● 공지사항 글 수정</h3>
 	<form action="${path1 }/NoticeUpdate.do" method="post" enctype="multipart/form-data">
 	<input type=hidden name="nno" value="${notice.nno }">
 		<table class="table is-hoverable" style="width:100%">

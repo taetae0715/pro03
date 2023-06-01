@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>민원게시판</title>
+<title>민원 자세히 보기</title>
 <style>
 .main_wrap {width:1000px; margin:0 auto;}
 .blank {height:100px}
@@ -26,7 +26,7 @@ tr {margin-left:20px}
 <div class="blank"></div>
 
 <div class="main_wrap">
-	<h3 class="title is-3 min" style="color:rgb(0,154,218)">●나의 민원</h3>
+	<h3 class="title is-3 min" style="color:rgb(0,154,218)">● 나의 민원</h3>
 	<div class="divide">피신고자 정보(필수)</div>
 
 		<table class="table is-fullwidth">

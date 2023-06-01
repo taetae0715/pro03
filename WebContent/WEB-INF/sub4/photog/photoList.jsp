@@ -33,11 +33,12 @@ img {border:0;}
 <%@ include file="/header.jsp" %>
 <div class="blank"></div>
 <article class="main_wrap">
+	<h3 class="title is-3 min" style="color:rgb(0,154,218)">● 포토갤러리</h3>
 	<c:forEach items="${ptl }" var="pt">
 	<section class="sec" onclick="location.href='${path1 }/PhotoDetail.do?pno=${pt.pno }'" style="cursor:pointer;">
 		<article class="sec_img">
 		<!-- 파일1 썸네일 이미지 -->
-		<img src="${pt.file1 }" class="img_area">
+		<img src="${path1 }/data/photog/${pt.file1 }" alt="${pt.title }" class="img_area">
 		</article>
 		
 		

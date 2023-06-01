@@ -61,10 +61,12 @@ public class PhotoAdd extends HttpServlet {
 			/*System.out.println(file1);
 			System.out.println(file2);*/
 			if(file1!=null){
-				pt.setFile1("data/photog/"+file1);
+				pt.setFile1(file1);
+				//pt.setFile1("data/photog/"+file1);
 			}
 			if(file2!=null){
-				pt.setFile2("data/photog/"+file2);
+				pt.setFile2(file2);
+				//pt.setFile2("data/photog/"+file2);
 			}
 			
 		} catch (Exception e) {

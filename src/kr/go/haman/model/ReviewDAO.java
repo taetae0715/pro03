@@ -90,6 +90,9 @@ public class ReviewDAO {
 				pstmt.setString(2, rv.getWno());
 			}else if(wnosw>=50000 && wnosw<60000){
 				//음식점 테이블일경우
+				pstmt = conn.prepareStatement(MySQL8.REVIEW_UPDATE_FOOD);
+				pstmt.setFloat(1, rv.getPoint());
+				pstmt.setString(2, rv.getWno());
 			}
 			sw = pstmt.executeUpdate();
 			if(sw>0){

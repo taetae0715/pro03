@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>민원게시판</title>
+<title>민원 등록</title>
 <style>
 .main_wrap {width:1000px; margin:0 auto;}
 .blank {height:100px}
@@ -25,7 +25,7 @@ tr {margin-left:20px}
 <div class="blank"></div>
 
 <div class="main_wrap">
-	<h3 class="title is-3 min" style="color:rgb(0,154,218)">●민원 안내</h3>
+	<h3 class="title is-3 min" style="color:rgb(0,154,218)">● 민원 안내</h3>
 	<pre>제목과 내용은 접수 후 수정, 삭제가 불가능하므로 다시 확인하시고 신청해 주시기 바랍니다.
 규제 관련 민원의 경우 규제개혁신문고로 이관될 수 있습니다.
 신고성 민원의 경우 청렴포털시스템으로 이관될 수 있습니다.

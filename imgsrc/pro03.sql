@@ -165,7 +165,6 @@ INSERT INTO photog VALUES('40003','포토갤러리 제목3','포토갤러리의 
 INSERT INTO photog VALUES('40004','포토갤러리 제목4','포토갤러리의 내용입니다4','kim','김길동','첨부파일 없음','첨부파일 없음',DEFAULT,DEFAULT);
 INSERT INTO photog VALUES('40005','포토갤러리 제목5','포토갤러리의 내용입니다5','kim','김길동','첨부파일 없음','첨부파일 없음',DEFAULT,DEFAULT);
 
-
 -- insert into photog values()
 
 
