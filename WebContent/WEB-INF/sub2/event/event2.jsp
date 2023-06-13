@@ -155,7 +155,6 @@ function displayMarker(place) {
 });
 </script>
 
-		
 </section>
 
 </div>

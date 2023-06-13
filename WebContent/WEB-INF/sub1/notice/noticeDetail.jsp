@@ -23,7 +23,6 @@ tr {margin-left:20px}
 <body>
 <%@ include file="/header.jsp" %>
 <div class="blank"></div>
-
 <div class="main_wrap">
 
 		<table class="table is-fullwidth" style="width:100%">
@@ -61,14 +60,11 @@ tr {margin-left:20px}
 		</tr>
 		</table>
 		
-		
 	<div style="text-align:right">
-
 
 	</div>
 	<div class="blank" style="margin-bottom:100px"></div>
 </div>
-
 <%@ include file="/footer.jsp" %>
 </body>
 </html>

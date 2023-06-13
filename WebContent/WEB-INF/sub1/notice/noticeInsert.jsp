@@ -68,13 +68,10 @@ tr {margin-left:20px}
 		<input type="submit" class="button is-success" value="공지사항등록" >
 		</td>
 		</tr>
-
-		
 		</table>
 	</form>
 	
 	<div style="text-align:right">
-
 
 	</div>
 	<div class="blank" style="margin-bottom:100px"></div>

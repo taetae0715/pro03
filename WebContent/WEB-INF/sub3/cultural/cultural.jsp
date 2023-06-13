@@ -332,8 +332,6 @@ img {border:0;}
 	</table>
 	</div>
 
-
-
 </div>
 <div class="blank" style="margin-bottom:100px"></div>
 <%@ include file="/footer.jsp" %>

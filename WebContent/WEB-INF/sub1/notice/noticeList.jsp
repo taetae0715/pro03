@@ -38,7 +38,6 @@ tr {margin-left:20px}
 <body>
 <%@ include file="/header.jsp" %>
 <div class="blank"></div>
-
 <div class="main_wrap">
 	<h3 class="title is-3 min" style="color:rgb(0,154,218)">● 공지사항</h3>
 
@@ -96,8 +95,7 @@ tr {margin-left:20px}
 			</div>
 			</c:if>
 	</div>
-	
-	
+
 	<div style="text-align:right">
 	<c:if test="${sid=='admin' }">
 	<input type="button" class="button is-info" value="공지글 쓰기" style="float:right" onclick="location.href='${path1 }/GoNoticeInsert.do'">
